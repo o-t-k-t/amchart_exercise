@@ -1,0 +1,22 @@
+[
+  {"product": "Base Bread", "nutrion": "タンパク質", "value": 28.1},
+  {"product": "Base Bread", "nutrion": "ω3系脂肪酸", "value": 0.8},
+  {"product": "Base Bread", "nutrion": "ω6系脂肪酸", "value": 2.6},
+  {"product": "Base Bread", "nutrion": "その他脂肪酸", "value": 8.4},
+  {"product": "Base Bread", "nutrion": "糖質", "value": 44.6},
+  {"product": "Base Bread", "nutrion": "食物繊維", "value": 6.8},
+  {"product": "Base Bread", "nutrion": "食塩", "value": 2.17},
+  {"product": "Base Bread", "nutrion": "亜鉛", "value": 0.0033},
+  {"product": "Base Bread", "nutrion": "カリウム", "value": 0.933},
+  {"product": "Base Bread", "nutrion": "カルシウム", "value": 0.228},
+  {"product": "Base Bread", "nutrion": "クロム", "value": 0.0000037},
+  {"product": "Base Bread", "nutrion": "セレン", "value": 0.0000247},
+  {"product": "Base Bread", "nutrion": "鉄", "value": 0.0032},
+  {"product": "Base Bread", "nutrion": "銅", "value": 0.0004},
+  {"product": "Base Bread", "nutrion": "マグネシウム", "value": 0.145},
+  {"product": "Base Bread", "nutrion": "マンガン", "value": 0.0033},
+  {"product": "Base Bread", "nutrion": "モリプテン", "value": 0.0001805},
+  {"product": "Base Bread", "nutrion": "ヨウ素", "value": 0.0000507},
+  {"product": "Base Bread", "nutrion": "リン", "value": 0.365},
+  {"product": "Base Bread", "nutrion": "ナイアシン", "value": 0.0181}
+]
