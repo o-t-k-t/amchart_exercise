@@ -8,25 +8,58 @@ am4core.ready(function() {
   let chart = am4core.create("chartdiv", am4charts.XYChart);
   chart.data = require('./data.json');
 
-  let categoryAxis = chart.xAxes.push(new am4charts.DateAxis());
-  categoryAxis.dataFields.date = "date";
-  categoryAxis.title.text = "日付";
+  let dateAxis = chart.xAxes.push(new am4charts.DateAxis());
+  dateAxis.dataFields.date = "date";
+  dateAxis.title.text = "日付";
 
   let valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
   valueAxis.title.text = "量";
+  // valueAxis.renderer.opposite = true; 軸位置を左→右
 
-  let series = chart.series.push(new am4charts.LineSeries());
-  series.stroke = am4core.color("＃ff0000");  // 赤
-  series.strokeWidth = 3;  // 3px
-
-  let bullet = series.bullets.push(new am4charts.CircleBullet());
-  bullet.tooltipText = "シリーズ：{date} \n値：{value}";
-
-  series.dataFields.valueY = "value";
-  series.dataFields.dateX = "date";
+  // plusElementASeries
+  let plusElementASeries = chart.series.push(new am4charts.LineSeries());
+  plusElementASeries.stroke = am4core.color("＃ff0000");  // 赤
+  plusElementASeries.strokeWidth = 3;  // 3px
+  plusElementASeries.dataFields.valueY = "plusElementA";
+  plusElementASeries.dataFields.dateX = "date";
+  plusElementASeries.stacked = true;
+  plusElementASeries.fillOpacity = 0.6;
 
   // ADJUST BULLETS ONTO LEFT EDGE OF EACH CELL!!!!!
-  series.dataItems.template.locations.dateX = 0;
+  plusElementASeries.dataItems.template.locations.dateX = 0;
+
+  let plusElementABullet = plusElementASeries.bullets.push(new am4charts.CircleBullet());
+  plusElementABullet.tooltipText = "シリーズ：{date} \n値：{plusElementA}";
+
+  // plusElementB series
+  let plusElementBSeries = chart.series.push(new am4charts.LineSeries());
+  plusElementBSeries.stroke = am4core.color("＃ff0000");  // 赤
+  plusElementBSeries.strokeWidth = 3;  // 3px
+  plusElementBSeries.dataFields.valueY = "plusElementB";
+  plusElementBSeries.dataFields.dateX = "date";
+  plusElementBSeries.stacked = true;
+  plusElementBSeries.fillOpacity = 0.6;
+
+  // ADJUST BULLETS ONTO LEFT EDGE OF EACH CELL!!!!!
+  plusElementBSeries.dataItems.template.locations.dateX = 0;
+
+  let plusElementBBullet = plusElementBSeries.bullets.push(new am4charts.CircleBullet());
+  plusElementBBullet.tooltipText = "シリーズ：{date} \n値：{plusElementA}";
+
+
+  // minusElement series
+  let minusElementSeries = chart.series.push(new am4charts.LineSeries());
+  minusElementSeries.stroke = am4core.color("＃ff0000");  // 赤
+  minusElementSeries.strokeWidth = 3;  // 3px
+  minusElementSeries.dataFields.valueY = "minusElement";
+  minusElementSeries.dataFields.dateX = "date";
+  minusElementSeries.stacked = true;
+  minusElementSeries.fillOpacity = 0.6;
+  // ADJUST BULLETS ONTO LEFT EDGE OF EACH CELL!!!!!
+  minusElementSeries.dataItems.template.locations.dateX = 0;
+
+  let minusElementBullet = minusElementSeries.bullets.push(new am4charts.CircleBullet());
+  minusElementBullet.tooltipText = "シリーズ：{date} \n値：{plusElementA}";
 
   // /* Chart code */
   // // Themes begin
